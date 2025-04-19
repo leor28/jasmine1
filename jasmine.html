@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>زهرة الياسمين - شخصية فريدة</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>زهرة الياسمين</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      background-color: #fffdf9;
-      direction: rtl;
-      height: 100vh;
       padding: 20px;
+      background-color: #fffdf9;
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
       display: flex;
       align-items: center;
       justify-content: center;
+      min-height: 100vh;
       overflow: hidden;
       position: relative;
-    }
-
-    .emoji {
-      position: absolute;
-      font-size: 30px;
-      opacity: 0.5;
-      animation: floatEmoji 15s linear infinite;
-    }
-
-    .emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .emoji:nth-child(2) { left: 30%; animation-delay: 3s; }
-    .emoji:nth-child(3) { left: 50%; animation-delay: 6s; }
-    .emoji:nth-child(4) { left: 70%; animation-delay: 1s; }
-    .emoji:nth-child(5) { left: 90%; animation-delay: 4s; }
-
-    @keyframes floatEmoji {
-      0% {
-        top: 110%;
-        transform: rotate(0deg);
-      }
-      100% {
-        top: -10%;
-        transform: rotate(360deg);
-      }
     }
 
     .card {
@@ -52,8 +28,8 @@
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       padding: 25px;
-      width: 100%;
       max-width: 350px;
+      width: 100%;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -108,21 +84,42 @@
       font-weight: bold;
       color: #444;
     }
+
+    /* اختياري: رموز عائمة (تبينها؟) */
+    .emoji {
+      position: absolute;
+      font-size: 30px;
+      opacity: 0.5;
+      animation: floatEmoji 15s linear infinite;
+    }
+
+    .emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .emoji:nth-child(2) { left: 30%; animation-delay: 3s; }
+    .emoji:nth-child(3) { left: 50%; animation-delay: 6s; }
+    .emoji:nth-child(4) { left: 70%; animation-delay: 1s; }
+    .emoji:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+    @keyframes floatEmoji {
+      0% { top: 110%; transform: rotate(0deg); }
+      100% { top: -10%; transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
 
+  <!-- رموز متحركة -->
   <div class="emoji">🌸</div>
   <div class="emoji">🍃</div>
   <div class="emoji">🌼</div>
   <div class="emoji">🌿</div>
   <div class="emoji">🌺</div>
 
+  <!-- البطاقة الثابتة -->
   <div class="card">
     <img src="https://www.epicgardening.com/wp-content/uploads/2022/03/A-shot-of-a-white-flower-that-showcases-types-of-jasmine.jpg" alt="زهرة الياسمين">
     <h2>شخصية زهرة الياسمين</h2>
     <p>
-      تجمع هذه الشخصية بين النقاء، اللطافة، الكرم، الطموح، والتضحية. 
+      تجمع هذه الشخصية بين النقاء، اللطافة، الكرم، الطموح، والتضحية.
       تحب الخير، تحفظ القرآن، تهتم بدراستها وتخدم أهلها بدون كلل أو ملل.
     </p>
     <div>
