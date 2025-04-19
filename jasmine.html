@@ -2,14 +2,22 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>زهرة الياسمين - شخصية فريدة</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       background-color: #fffdf9;
-      overflow: hidden;
       direction: rtl;
+
+      /* تمركز البطاقة في المنتصف */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
     }
 
     .emoji {
@@ -18,8 +26,6 @@
       opacity: 0.5;
       animation: floatEmoji 15s linear infinite;
     }
-
-    /* نحط عدد من الإيموجيات بمواقع مختلفة */
     .emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
     .emoji:nth-child(2) { left: 30%; animation-delay: 3s; }
     .emoji:nth-child(3) { left: 50%; animation-delay: 6s; }
@@ -43,10 +49,11 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       padding: 30px;
       max-width: 400px;
-      margin: 100px auto;
+      width: 90%;
       text-align: center;
       position: relative;
       z-index: 2;
+      margin: 0;
     }
 
     .card img {
@@ -102,44 +109,44 @@
 </head>
 <body>
 
-<!-- إيموجيات تتحرك في الخلفية -->
-<div class="emoji">🌸</div>
-<div class="emoji">🍃</div>
-<div class="emoji">🌼</div>
-<div class="emoji">🌿</div>
-<div class="emoji">🌺</div>
+  <!-- إيموجيات تتحرك في الخلفية -->
+  <div class="emoji">🌸</div>
+  <div class="emoji">🍃</div>
+  <div class="emoji">🌼</div>
+  <div class="emoji">🌿</div>
+  <div class="emoji">🌺</div>
 
-<div class="card">
-  <img src="https://www.epicgardening.com/wp-content/uploads/2022/03/A-shot-of-a-white-flower-that-showcases-types-of-jasmine.jpg" alt="زهرة الياسمين">
-  <h2>شخصية زهرة الياسمين</h2>
-  <p>
-    تجمع هذه الشخصية بين النقاء، اللطافة، الكرم، الطموح، والتضحية. 
-    تحب الخير، تحفظ القرآن، تهتم بدراستها وتخدم أهلها بدون كلل أو ملل.
-  </p>
-  <div>
-    <span class="tag">كريمة</span>
-    <span class="tag">لطيفة</span>
-    <span class="tag">طموحة</span>
-    <span class="tag">مخلصة</span>
-    <span class="tag">قوية</span>
-    <span class="tag">محبوبة</span>
-  </div>
-
-  <div class="question">
-    <p>أعجبتك الهدية؟ 💝</p>
-    <div class="buttons">
-      <button onclick="showResponse('رأيك يسعدني! 💕')">نعم</button>
-      <button onclick="showResponse('ولا يهمك، الجايات أجمل 🌷')">لا</button>
+  <div class="card">
+    <img src="https://www.epicgardening.com/wp-content/uploads/2022/03/A-shot-of-a-white-flower-that-showcases-types-of-jasmine.jpg" alt="زهرة الياسمين">
+    <h2>شخصية زهرة الياسمين</h2>
+    <p>
+      تجمع هذه الشخصية بين النقاء، اللطافة، الكرم، الطموح، والتضحية. 
+      تحب الخير، تحفظ القرآن، تهتم بدراستها وتخدم أهلها بدون كلل أو ملل.
+    </p>
+    <div>
+      <span class="tag">كريمة</span>
+      <span class="tag">لطيفة</span>
+      <span class="tag">طموحة</span>
+      <span class="tag">مخلصة</span>
+      <span class="tag">قوية</span>
+      <span class="tag">محبوبة</span>
     </div>
-    <div class="response" id="responseText"></div>
-  </div>
-</div>
 
-<script>
-  function showResponse(message) {
-    document.getElementById("responseText").textContent = message;
-  }
-</script>
+    <div class="question">
+      <p>أعجبتك الهدية؟ 💝</p>
+      <div class="buttons">
+        <button onclick="showResponse('رأيك يسعدني! 💕')">نعم</button>
+        <button onclick="showResponse('ولا يهمك، الجايات أجمل 🌷')">لا</button>
+      </div>
+      <div class="response" id="responseText"></div>
+    </div>
+  </div>
+
+  <script>
+    function showResponse(message) {
+      document.getElementById("responseText").textContent = message;
+    }
+  </script>
 
 </body>
 </html>
