@@ -5,21 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>زهرة الهندباء</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       background: linear-gradient(to bottom, #f7f7f7, #e0f7ec);
       font-family: 'Cairo', sans-serif;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    .container {
+    .wrapper {
       text-align: center;
-      padding: 20px;
+      max-width: 90vw;
+      width: 360px;
     }
 
     .flower {
@@ -35,14 +40,12 @@
 
     .card {
       background-color: white;
-      padding: 20px 30px;
+      padding: 20px 25px;
       border-radius: 20px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       text-align: center;
-      max-width: 90vw;
-      width: 360px;
+      margin-top: 15px;
       line-height: 2;
-      margin-top: 20px;
     }
 
     .question {
@@ -53,7 +56,7 @@
       background-color: #a3d2ca;
       border: none;
       padding: 10px 20px;
-      margin: 10px;
+      margin: 10px 5px;
       border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
@@ -67,7 +70,7 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="wrapper">
     <div class="flower">🌼</div>
 
     <div class="card">
