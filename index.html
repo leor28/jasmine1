@@ -1,145 +1,82 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>زهرة الياسمين - شخصية فريدة</title>
+  <title>زهرة الهندباء</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      background-color: #fffdf9;
+      background: linear-gradient(to bottom, #f7f7f7, #e0f7ec);
+      font-family: 'Cairo', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
       overflow: hidden;
-      direction: rtl;
     }
 
-    .emoji {
-      position: absolute;
-      font-size: 30px;
-      opacity: 0.5;
-      animation: floatEmoji 15s linear infinite;
+    .flower {
+      font-size: 4rem;
+      animation: float 6s ease-in-out infinite;
     }
 
-    /* نحط عدد من الإيموجيات بمواقع مختلفة */
-    .emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .emoji:nth-child(2) { left: 30%; animation-delay: 3s; }
-    .emoji:nth-child(3) { left: 50%; animation-delay: 6s; }
-    .emoji:nth-child(4) { left: 70%; animation-delay: 1s; }
-    .emoji:nth-child(5) { left: 90%; animation-delay: 4s; }
-
-    @keyframes floatEmoji {
-      0% {
-        top: 110%;
-        transform: rotate(0deg);
-      }
-      100% {
-        top: -10%;
-        transform: rotate(360deg);
-      }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
     }
 
     .card {
-      background-color: #fff;
+      background-color: white;
+      padding: 20px 30px;
       border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 30px;
-      max-width: 400px;
-      margin: 100px auto;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .card img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    .card h2 {
-      color: #5b8c5a;
-    }
-
-    .card p {
-      color: #444;
-      line-height: 1.8;
-    }
-
-    .tag {
-      display: inline-block;
-      background-color: #f3f3f3;
-      color: #5b8c5a;
-      padding: 5px 10px;
-      border-radius: 12px;
-      margin: 5px;
-      font-size: 14px;
+      max-width: 400px;
+      line-height: 2;
     }
 
     .question {
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
-    .buttons button {
-      margin: 10px;
-      padding: 10px 20px;
+    button {
+      background-color: #a3d2ca;
       border: none;
-      background-color: #5b8c5a;
-      color: white;
-      border-radius: 12px;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background 0.3s;
     }
 
-    .buttons button:hover {
-      background-color: #477b47;
-    }
-
-    .response {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #444;
+    button:hover {
+      background-color: #80c9bb;
     }
   </style>
 </head>
 <body>
 
-<!-- إيموجيات تتحرك في الخلفية -->
-<div class="emoji">🌸</div>
-<div class="emoji">🍃</div>
-<div class="emoji">🌼</div>
-<div class="emoji">🌿</div>
-<div class="emoji">🌺</div>
+  <div class="flower">🌼</div>
 
-<div class="card">
-  <img src="https://www.epicgardening.com/wp-content/uploads/2022/03/A-shot-of-a-white-flower-that-showcases-types-of-jasmine.jpg" alt="زهرة الياسمين">
-  <h2>شخصية زهرة الياسمين</h2>
-  <p>
-    تجمع هذه الشخصية بين النقاء، اللطافة، الكرم، الطموح، والتضحية. 
-    تحب الخير، تحفظ القرآن، تهتم بدراستها وتخدم أهلها بدون كلل أو ملل.
-  </p>
-  <div>
-    <span class="tag">كريمة</span>
-    <span class="tag">لطيفة</span>
-    <span class="tag">طموحة</span>
-    <span class="tag">مخلصة</span>
-    <span class="tag">قوية</span>
-    <span class="tag">محبوبة</span>
-  </div>
+  <div class="card">
+    <h2>هي مثل زهرة الهندباء 🌼</h2>
+    <p>
+      طيبة... ما تقول لا<br>
+      تحفظ القرآن وتدرّس<br>
+      تشتغل وتضحي وتنسى نفسها<br>
+      تمنح الأمان بدون ما تطلب<br>
+      تتحمل وتسهر… وتصبر<br>
+      ومهما تعبَت… تظل تطير مثل أماني الهندباء
+    </p>
 
-  <div class="question">
-    <p>أعجبتك الهدية؟ 💝</p>
-    <div class="buttons">
-      <button onclick="showResponse('رأيك يسعدني! 💕')">نعم</button>
-      <button onclick="showResponse('ولا يهمك، الجايات أجمل 🌷')">لا</button>
+    <div class="question">
+      <p>هل أعجبتك الهدية؟</p>
+      <button onclick="alert('يسعدك ربي 🤍')">نعم</button>
+      <button onclick="alert('متى ما تبين نغيّرها لك! 🌷')">لا</button>
     </div>
-    <div class="response" id="responseText"></div>
   </div>
-</div>
-
-<script>
-  function showResponse(message) {
-    document.getElementById("responseText").textContent = message;
-  }
-</script>
 
 </body>
 </html>
